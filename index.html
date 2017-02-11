@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>TUFILMOTK</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  <style>
+    .buscar {
+      display: none;
+    }
+    
+    .titulo {
+      font-size: 1em !important;
+      font-weight: bold !important;
+      padding: 20px !important;
+    }
+    
+    .marca {
+      font-size: 1.7em !important;
+    }
+    
+    .marca span {
+      font-size: .6em !important;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="teal lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo marca">TuFilmotk <span> beta</span></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center blue-grey-text">Buscar pelis</h1>
+      <div class="row buscar">
+        <h5 class="header col s12 light">
+          <div class="input-field col s12">
+            <input id="buscar" type="text" class="validate">
+            <label for="buscar">TITULO</label>
+          </div>
+        </h5>
+      </div>
+      <div class="row center preloader">
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div id="resultados" class="row">
+
+      </div>
+
+    </div>
+  </div>
+</body>
+<script>
+  (function (i, s, o, g, r, a, m) {
+  i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+    (i[r].q = i[r].q || []).push(arguments)
+  }, i[r].l = 1 * new Date(); a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-90993783-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/lodash/lodash.min.js"></script>
+<script src="node_modules/lowdb/dist/lowdb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>
