@@ -4,17 +4,21 @@ $.get('movies.json', function (data) {
     $("#buscar").keyup(function () {
         var result = [];
         var searchtxt = $('#buscar').val().toLowerCase();
-        if (searchtxt.length > 2) { 
+        if (searchtxt.length > 2) {
+            var count = 1;
             _.find(data, function (item) {
                 if (item.title.toLowerCase().indexOf(searchtxt) !== -1 ||
                     item.title_english.toLowerCase().indexOf(searchtxt) !== -1 || 
                     item.title_long.toLowerCase().indexOf(searchtxt) !== -1 ||
                     item.imdb_code.toLowerCase().indexOf(searchtxt) !== -1 ||
+                    item.title_english.toLowerCase().indexOf(searchtxt) !== -1 ||
                     item.year.toString() == searchtxt
                 ) {
                     result.push(item);
                     showResults(result);
+                    count++;
                 }
+                
             });
         }    
     });
