@@ -1,4 +1,4 @@
-$.get('movies.json', function (data) {
+$.get('movies.json?v=1.0', function (data) {
     $('.buscar').show();
     $('.preloader').hide();
     $("#buscar").keyup(function () {
